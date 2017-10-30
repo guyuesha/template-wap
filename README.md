@@ -1,6 +1,6 @@
 # traceability-wap-web
 
-> A Vue.js project
+>  WAP版页面构建模板
 
 ## Build Setup
 
