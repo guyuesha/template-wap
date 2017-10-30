@@ -1,0 +1,52 @@
+@charset "UTF-8";
+// 字体适配
+@mixin fontsz($fontSize:12px) {
+    font-size: $fontSize*1;
+    /*no*/
+    [data-dpr='2'] & {
+        font-size: $fontSize*2;
+        /*no*/
+    }
+    [data-dpr='3'] & {
+        font-size: $fontSize*3;
+        /*no*/
+    }
+    [data-dpr='4'] & {
+        font-size: $fontSize*4;
+        /*no*/
+    }
+}
+
+// 图片适配
+@mixin icon($imgWidth:30px, $imgHeight:30px, $url:'../../assets/images/Group-5') {
+    width: $imgWidth;
+    height: $imgHeight;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-image: url($url+'.png');
+    background-image: url($url+'__3x.png');
+    background-size: $imgWidth $imgHeight;
+    [data-dpr='2'] & {
+        background-image: url($url+'__2x.png');
+    }
+    [data-dpr='3'] & {
+        background-image: url($url+'__3x.png');
+    }
+    [data-dpr='4'] & {
+        background-image: url($url+'__3x.png');
+    }
+}
+
+// 只生成$1x倍数的字体大小
+@mixin font_1x($fontSize:12px) {
+    font-size: $fontSize/2;
+    /*no*/
+}
+
+@mixin line2Ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

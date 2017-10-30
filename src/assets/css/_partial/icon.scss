@@ -1,0 +1,23 @@
+.radio {
+    font-size: 0;
+    input+i {
+        vertical-align: top;
+        @include icon(16px, 16px, './assets/images/Oval-6-Copy-3');
+    }
+    input:checked {
+        &+i {
+            @include icon(16px, 16px, './assets/images/Group-42');
+        }
+    }
+    span {
+        height: 16px;
+        line-height: 16px;
+        @include fontsz($fontsize);
+        display: inline-block;
+        margin-left: 10px;
+        // vertical-align: middle;
+    }
+    input {
+        display: none;
+    }
+}

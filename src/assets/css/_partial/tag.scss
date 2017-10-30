@@ -1,0 +1,23 @@
+.tagList {
+    padding: 30px 25px 15px 25px;
+    &-item {
+        border: 1px solid $color-typeClass;
+        /*no*/
+        min-width: 62px;
+        padding-left: 12px;
+        padding-right: 12px;
+        height: 17px;
+        line-height: 17px;
+        display: inline-block;
+        margin-bottom: 15px;
+        margin-right: 18px;
+        text-align: center;
+        border-radius: 2px;
+        background-color: #fff;
+        @include fontsz($fontsize);
+        &.is-active {
+            border-color: $color-navTip;
+            color: $color-tag;
+        }
+    }
+}

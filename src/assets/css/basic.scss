@@ -1,0 +1,62 @@
+    @charset "utf-8";
+    @import './lib/core';
+    @import './_partial/_vars';
+    @import './_partial/_mixin';
+
+    .flexGroup {
+        display: flex;
+    }
+
+    .flexcenterGroup {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    body,
+    html {
+        background-color: $colorBg;
+        min-height: 100%;
+        @include fontsz($fontsize);
+    }
+
+    .text-mini {
+        @include fontsz($fontsize-mini);
+    }
+
+    .text-normal {
+        @include fontsz($fontsize);
+    }
+
+    .linkText {
+        color: $color-link;
+    }
+
+    .fs0 {
+        font-size: 0;
+    }
+
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+        -webkit-appearance: none;
+    }
+
+    textarea,
+    button {
+        -webkit-appearance: none;
+    }
+
+    button {
+        -webkit-appearance: none;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+        outline: none
+    }
+
+    textarea {
+        resize: none
+    }
