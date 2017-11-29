@@ -5,7 +5,7 @@
   "author": "Sally Hu",
   "private": true,
   "scripts": {
-    "dev": "nodemon build/dev-server.js",
+    "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
